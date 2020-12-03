@@ -33,7 +33,6 @@ flask_debug = os.getenv('DEBUG', False)
 def invalid_request(e):
     return jsonify({'message': str(e)}), 406
 
-
 @app.errorhandler(500)
 def handle_error(e):
     logger.exception(e)
